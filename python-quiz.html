@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .option:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold mb-8 text-center">Python Quiz</h1>
+
+        <div id="quiz-container" class="bg-white rounded-lg shadow-md p-6">
+            <!-- Question 1 -->
+            <div id="question1" class="question mb-8">
+                <p class="text-lg font-semibold mb-4">1. What is the output of the following code?</p>
+                <pre><code class="block bg-gray-200 p-4 rounded-lg">x = 5
+y = 2
+print(x ** y)</code></pre>
+                <button onclick="checkAnswer('A')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) 25</button> 
+                <button onclick="checkAnswer('B')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) 10</button>
+                <button onclick="checkAnswer('C')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) 7</button>
+                <button onclick="checkAnswer('D')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) 32</button>
+            </div>
+
+            <!-- Question 2 -->
+            <div id="question2" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">2. What is the result of the expression `5 / 2` in Python?</p>
+                <button onclick="checkAnswer('A')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) 2.5</button>
+                <button onclick="checkAnswer('B')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) 2</button>
+                <button onclick="checkAnswer('C')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) 2.0</button>
+                <button onclick="checkAnswer('D')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) 3</button>
+            </div>
+
+            <!-- Question 3 -->
+            <div id="question3" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">3. What will be printed by the following code?</p>
+                <pre><code class="block bg-gray-200 p-4 rounded-lg">for i in range(1, 5):
+    print(i)</code></pre>
+                <button onclick="checkAnswer('A')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) 1 2 3 4</button>
+                <button onclick="checkAnswer('B')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) 1 2 3 4 5</button>
+                <button onclick="checkAnswer('C')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) 0 1 2 3</button>
+                <button onclick="checkAnswer('D')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) 0 1 2 3 4</button>
+            </div>
+
+            <!-- Question 4 -->
+            <div id="question4" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">4. Which of the following is used to comment multiple lines in Python?</p>
+                <button onclick="checkAnswer('A')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) //</button>
+                <button onclick="checkAnswer('B')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) /* */</button>
+                <button onclick="checkAnswer('C')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) #</button>
+                <button onclick="checkAnswer('D')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) &lt;!-- --&gt;</button>
+            </div>
+
+            <!-- Question 5 -->
+            <div id="question5" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">5. What is the correct way to declare a list in Python?</p>
+                <button onclick="checkAnswer('A')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) list = (1, 2, 3)</button>
+                <button onclick="checkAnswer('B')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) list = [1, 2, 3]</button>
+                <button onclick="checkAnswer('C')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) list = {1, 2, 3}</button>
+                <button onclick="checkAnswer('D')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) list = {1: 'one', 2: 'two', 3: 'three'}</button>
+            </div>
+
+            <!-- Question 6 -->
+            <div id="question6" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">6. What is the output of the following code?</p>
+                <pre><code class="block bg-gray-200 p-4 rounded-lg">x = [1, 2, 3]
+y = x
+y.append(4)
+print(x)</code></pre>
+                <button onclick="checkAnswer('A')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) [1, 2, 3]</button>
+                <button onclick="checkAnswer('B')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) [1, 2, 3, 4]</button>
+                <button onclick="checkAnswer('C')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) [1, 2, 3, [4]]</button>
+                <button onclick="checkAnswer('D')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) Error</button>
+            </div>
+
+            <!-- Question 7 -->
+            <div id="question7" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">7. What is the result of `2 == 2.0` in Python?</p>
+                <button onclick="checkAnswer('A')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) True</button>
+                <button onclick="checkAnswer('B')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) False</button>
+                <button onclick="checkAnswer('C')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) Error</button>
+                <button onclick="checkAnswer('D')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) None</button>
+            </div>
+
+            <!-- Question 8 -->
+            <div id="question8" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">8. What is the output of the following code?</p>
+                <pre><code class="block bg-gray-200 p-4 rounded-lg">x = "Python"
+print(x[2:])</code></pre>
+                <button onclick="checkAnswer('A')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) Pytho</button>
+                <button onclick="checkAnswer('B')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) thon</button>
+                <button onclick="checkAnswer('C')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) Python</button>
+                <button onclick="checkAnswer('D')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) thonPy</button>
+            </div>
+
+            <!-- Question 9 -->
+            <div id="question9" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">9. What does the `range()` function return in Python 3?</p>
+                <button onclick="checkAnswer('A')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) List</button>
+                <button onclick="checkAnswer('B')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) Iterator</button>
+                <button onclick="checkAnswer('C')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) Dictionary</button>
+                <button onclick="checkAnswer('D')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) Tuple</button>
+            </div>
+
+            <!-- Question 10 -->
+            <div id="question10" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">10. What is the output of the following code?</p>
+                <pre><code class="block bg-gray-200 p-4 rounded-lg">def func(x, y=3):
+    return x * y
+
+print(func(2))</code></pre>
+                <button onclick="checkAnswer('A')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) 5</button>
+                <button onclick="checkAnswer('B')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) 6</button>
+                <button onclick="checkAnswer('C')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) 9</button>
+                <button onclick="checkAnswer('D')" class="option bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) 3</button>
+            </div>
+        </div>
+
+        <div id="result-container" class="hidden bg-white rounded-lg shadow-md p-6 mt-8">
+            <p id="result-text" class="text-xl font-bold mb-2"></p>
+            <p id="score-text" class="text-lg font-semibold mb-4"></p>
+            <button id="restart-btn" onclick="restartQuiz()" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+        let answers = [];
+        const correctAnswers = ["A", "A", "D", "C", "B", "A", "A", "C", "B", "B"];
+
+        function checkAnswer(selectedAnswer) {
+            answers.push(selectedAnswer);
+            score++;
+            if (score < 10) {
+                document.getElementById('question' + score).classList.add('hidden');
+                document.getElementById('question' + (score + 1)).classList.remove('hidden');
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            const resultContainer = document.getElementById('result-container');
+            const resultText = document.getElementById('result-text');
+            const scoreText = document.getElementById('score-text');
+
+            let correctCount = 0;
+            for (let i = 0; i < correctAnswers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            resultText.textContent = "Quiz Completed!";
+            scoreText.textContent = "Your score is " + correctCount + " out of 10.";
+            resultContainer.classList.remove('hidden');
+        }
+
+        function restartQuiz() {
+            score = 0;
+            answers = [];
+            document.querySelectorAll('.question').forEach(question => {
+                question.classList.add('hidden');
+            });
+            document.getElementById('question1').classList.remove('hidden');
+            document.getElementById('result-container').classList.add('hidden');
+        }
+
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+
+        window.onload = function () {
+            window.onbeforeunload = function () {
+                return "Are you sure you want to leave this page?";
+            };
+        }
+
+        window.addEventListener('unload', function () {
+            localStorage.setItem('score', score);
+        });
+    </script>
+</body>
+</html>

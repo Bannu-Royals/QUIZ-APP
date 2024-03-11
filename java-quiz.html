@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .option:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold mb-8 text-center">Java Quiz</h1>
+
+        <div id="quiz-container" class="bg-white rounded-lg shadow-md p-6">
+            <!-- Question 1 -->
+            <div id="question1" class="question mb-8">
+                <p class="text-lg font-semibold mb-4">1. What is the output of the following code?</p>
+                <pre><code class="block bg-gray-200 p-4 rounded-lg">public class Main {
+    public static void main(String[] args) {
+        int x = 5;
+        System.out.println(x + 2);
+    }
+}</code></pre>
+                <button onclick="checkAnswer('A')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) 7</button>
+                <button onclick="checkAnswer('B')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) 52</button>
+                <button onclick="checkAnswer('C')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) 5 + 2</button>
+                <button onclick="checkAnswer('D')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) Compilation Error</button>
+            </div>
+
+            <!-- Question 2 -->
+            <div id="question2" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">2. What is the result of the expression `10 / 3` in Java?</p>
+                <button onclick="checkAnswer('A')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) 3.33</button>
+                <button onclick="checkAnswer('B')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) 3</button>
+                <button onclick="checkAnswer('C')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) 3.0</button>
+                <button onclick="checkAnswer('D')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) 3.3333333...</button>
+            </div>
+
+            <!-- Question 3 -->
+            <div id="question3" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">3. What will be printed by the following code?</p>
+                <pre><code class="block bg-gray-200 p-4 rounded-lg">int x = 0;
+while (x < 5) {
+    System.out.print(x + " ");
+    x += 2;
+}</code></pre>
+                <button onclick="checkAnswer('A')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) 0 1 2 3 4</button>
+                <button onclick="checkAnswer('B')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) 0 2 4</button>
+                <button onclick="checkAnswer('C')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) 2 4 6 8</button>
+                <button onclick="checkAnswer('D')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) Infinite loop</button>
+            </div>
+
+            <!-- Question 4 -->
+            <div id="question4" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">4. Which of the following is not a valid Java identifier?</p>
+                <button onclick="checkAnswer('A')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) myVariable</button>
+                <button onclick="checkAnswer('B')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) _variable</button>
+                <button onclick="checkAnswer('C')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) 123variable</button>
+                <button onclick="checkAnswer('D')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) $variable</button>
+            </div>
+
+            <!-- Question 5 -->
+            <div id="question5" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">5. What is the correct way to declare a String in Java?</p>
+                <button onclick="checkAnswer('A')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) String str = "Hello";</button>
+                <button onclick="checkAnswer('B')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) str = "Hello";</button>
+                <button onclick="checkAnswer('C')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) str = String("Hello");</button>
+                <button onclick="checkAnswer('D')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) String str; str = "Hello";</button>
+            </div>
+
+            <!-- Question 6 -->
+            <div id="question6" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">6. What will be the output of the following code?</p>
+                <pre><code class="block bg-gray-200 p-4 rounded-lg">int[][] arr = { {1, 2, 3}, {4, 5, 6} };
+System.out.println(arr[1][1]);</code></pre>
+                <button onclick="checkAnswer('A')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) 4</button>
+                <button onclick="checkAnswer('B')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) 5</button>
+                <button onclick="checkAnswer('C')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) 2</button>
+                <button onclick="checkAnswer('D')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) 6</button>
+            </div>
+
+            <!-- Question 7 -->
+            <div id="question7" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">7. What is the output of the following code?</p>
+                <pre><code class="block bg-gray-200 p-4 rounded-lg">String str = "Java";
+str.concat("Quiz");
+System.out.println(str);</code></pre>
+                <button onclick="checkAnswer('A')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) Java</button>
+                <button onclick="checkAnswer('B')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) JavaQuiz</button>
+                <button onclick="checkAnswer('C')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) QuizJava</button>
+                <button onclick="checkAnswer('D')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) Compilation Error</button>
+            </div>
+
+            <!-- Question 8 -->
+            <div id="question8" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">8. What is the correct way to declare a method in Java that does not return any value?</p>
+                <button onclick="checkAnswer('A')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) void myMethod() { }</button>
+                <button onclick="checkAnswer('B')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) myMethod() { }</button>
+                <button onclick="checkAnswer('C')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) int myMethod() { }</button>
+                <button onclick="checkAnswer('D')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) None of the above</button>
+            </div>
+
+            <!-- Question 9 -->
+            <div id="question9" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">9. Which of the following is not a Java keyword?</p>
+                <button onclick="checkAnswer('A')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) class</button>
+                <button onclick="checkAnswer('B')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) import</button>
+                <button onclick="checkAnswer('C')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) create</button>
+                <button onclick="checkAnswer('D')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) try</button>
+            </div>
+
+            <!-- Question 10 -->
+            <div id="question10" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">10. Which of the following is a way to create a new instance of a class in Java?</p>
+                <button onclick="checkAnswer('A')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) new MyClass();</button>
+                <button onclick="checkAnswer('B')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) MyClass.create();</button>
+                <button onclick="checkAnswer('C')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) create MyClass();</button>
+                <button onclick="checkAnswer('D')" class="option bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) MyClass.newInstance();</button>
+            </div>
+        </div>
+
+        <div id="result-container" class="hidden bg-white rounded-lg shadow-md p-6 mt-8">
+            <p id="result-text" class="text-xl font-bold mb-2"></p>
+            <p id="score-text" class="text-lg font-semibold mb-4"></p>
+            <button id="restart-btn" onclick="restartQuiz()" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+        let answers = [];
+        const correctAnswers = ["A", "B", "A", "C", "A", "B", "A", "A", "C", "A"];
+
+        function checkAnswer(selectedAnswer) {
+            answers.push(selectedAnswer);
+            score++;
+            if (score < 10) {
+                document.getElementById('question' + score).classList.add('hidden');
+                document.getElementById('question' + (score + 1)).classList.remove('hidden');
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            const resultContainer = document.getElementById('result-container');
+            const resultText = document.getElementById('result-text');
+            const scoreText = document.getElementById('score-text');
+
+            let correctCount = 0;
+            for (let i = 0; i < correctAnswers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            resultText.textContent = "Quiz Completed!";
+            scoreText.textContent = "Your score is " + correctCount + " out of 10.";
+            resultContainer.classList.remove('hidden');
+        }
+
+        function restartQuiz() {
+            score = 0;
+            answers = [];
+            document.querySelectorAll('.question').forEach(question => {
+                question.classList.add('hidden');
+            });
+            document.getElementById('question1').classList.remove('hidden');
+            document.getElementById('result-container').classList.add('hidden');
+        }
+
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+
+        window.onload = function () {
+            window.onbeforeunload = function () {
+                return "Are you sure you want to leave this page?";
+            };
+        }
+
+        window.addEventListener('unload', function () {
+            localStorage.setItem('score', score);
+        });
+    </script>
+</body>
+</html>

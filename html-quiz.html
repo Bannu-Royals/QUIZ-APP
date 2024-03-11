@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .option:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto py-8">
+        <h1 class="text-3xl font-bold mb-8 text-center">HTML Quiz</h1>
+
+        <div id="quiz-container" class="bg-white rounded-lg shadow-md p-6">
+            <!-- Question 1 -->
+            <div id="question1" class="question mb-8">
+                <p class="text-lg font-semibold mb-4">1. What does HTML stand for?</p>
+                <button onclick="checkAnswer('A')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) Hyper Text Markup Language</button>
+                <button onclick="checkAnswer('B')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) High-level Text Machine Language</button>
+                <button onclick="checkAnswer('C')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) Hyperlinks and Text Markup Language</button>
+                <button onclick="checkAnswer('D')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) Home Tool Markup Language</button>
+            </div>
+
+            <!-- Question 2 -->
+            <div id="question2" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">2. Which of the following tags is used to create a hyperlink in HTML?</p>
+                <button onclick="checkAnswer('A')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) &lt;link&gt;</button>
+                <button onclick="checkAnswer('B')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) &lt;a&gt;</button>
+                <button onclick="checkAnswer('C')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) &lt;href&gt;</button>
+                <button onclick="checkAnswer('D')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) &lt;p&gt;</button>
+            </div>
+
+            <!-- Question 3 -->
+            <div id="question3" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">3. Which tag is used to define a table row in HTML?</p>
+                <button onclick="checkAnswer('A')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) &lt;row&gt;</button>
+                <button onclick="checkAnswer('B')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) &lt;tr&gt;</button>
+                <button onclick="checkAnswer('C')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) &lt;table-row&gt;</button>
+                <button onclick="checkAnswer('D')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) &lt;tab-row&gt;</button>
+            </div>
+
+            <!-- Question 4 -->
+            <div id="question4" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">4. Which tag is used to create an input field in HTML?</p>
+                <button onclick="checkAnswer('A')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) &lt;input&gt;</button>
+                <button onclick="checkAnswer('B')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) &lt;field&gt;</button>
+                <button onclick="checkAnswer('C')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) &lt;text&gt;</button>
+                <button onclick="checkAnswer('D')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) &lt;textbox&gt;</button>
+            </div>
+
+            <!-- Question 5 -->
+            <div id="question5" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">5. What is the correct HTML for adding a background color?</p>
+                <button onclick="checkAnswer('A')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) &lt;body background="yellow"&gt;</button>
+                <button onclick="checkAnswer('B')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) &lt;body style="background-color: yellow"&gt;</button>
+                <button onclick="checkAnswer('C')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) &lt;background&gt;</button>
+                <button onclick="checkAnswer('D')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) &lt;bgcolor&gt;</button>
+            </div>
+
+            <!-- Question 6 -->
+            <div id="question6" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">6. Which HTML attribute is used to define inline styles?</p>
+                <button onclick="checkAnswer('A')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) font</button>
+                <button onclick="checkAnswer('B')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) class</button>
+                <button onclick="checkAnswer('C')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) style</button>
+                <button onclick="checkAnswer('D')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) styles</button>
+            </div>
+
+            <!-- Question 7 -->
+            <div id="question7" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">7. What is the correct HTML for creating a hyperlink?</p>
+                <button onclick="checkAnswer('A')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) &lt;a href="http://www.example.com"&gt;Example&lt;/a&gt;</button>
+                <button onclick="checkAnswer('B')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) &lt;link&gt;http://www.example.com&lt;/link&gt;</button>
+                <button onclick="checkAnswer('C')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) &lt;a url="http://www.example.com"&gt;Example&lt;/a&gt;</button>
+                <button onclick="checkAnswer('D')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) &lt;a&gt;http://www.example.com&lt;/a&gt;</button>
+            </div>
+
+            <!-- Question 8 -->
+            <div id="question8" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">8. What is the correct HTML for creating a checkbox?</p>
+                <button onclick="checkAnswer('A')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) &lt;check&gt;</button>
+                <button onclick="checkAnswer('B')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) &lt;input type="checkbox"&gt;</button>
+                <button onclick="checkAnswer('C')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) &lt;checkbox&gt;</button>
+                <button onclick="checkAnswer('D')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) &lt;input type="check"&gt;</button>
+            </div>
+
+            <!-- Question 9 -->
+            <div id="question9" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">9. Which HTML element is used for playing video files?</p>
+                <button onclick="checkAnswer('A')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) &lt;video&gt;</button>
+                <button onclick="checkAnswer('B')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) &lt;mp4&gt;</button>
+                <button onclick="checkAnswer('C')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) &lt;play&gt;</button>
+                <button onclick="checkAnswer('D')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) &lt;source&gt;</button>
+            </div>
+
+            <!-- Question 10 -->
+            <div id="question10" class="question mb-8 hidden">
+                <p class="text-lg font-semibold mb-4">10. Which HTML tag is used to define an unordered list?</p>
+                <button onclick="checkAnswer('A')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">A) &lt;ul&gt;</button>
+                <button onclick="checkAnswer('B')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">B) &lt;ol&gt;</button>
+                <button onclick="checkAnswer('C')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">C) &lt;li&gt;</button>
+                <button onclick="checkAnswer('D')" class="option bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mt-4 block w-full">D) &lt;list&gt;</button>
+            </div>
+        </div>
+
+        <div id="result-container" class="hidden bg-white rounded-lg shadow-md p-6 mt-8">
+            <p id="result-text" class="text-xl font-bold mb-2"></p>
+            <p id="score-text" class="text-lg font-semibold mb-4"></p>
+            <button id="restart-btn" onclick="restartQuiz()" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+        let answers = [];
+        const correctAnswers = ["A", "B", "B", "A", "B", "C", "A", "B", "A", "A"];
+
+        function checkAnswer(selectedAnswer) {
+            answers.push(selectedAnswer);
+            score++;
+            if (score < 10) {
+                document.getElementById('question' + score).classList.add('hidden');
+                document.getElementById('question' + (score + 1)).classList.remove('hidden');
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            const resultContainer = document.getElementById('result-container');
+            const resultText = document.getElementById('result-text');
+            const scoreText = document.getElementById('score-text');
+
+            let correctCount = 0;
+            for (let i = 0; i < correctAnswers.length; i++) {
+                if (answers[i] === correctAnswers[i]) {
+                    correctCount++;
+                }
+            }
+
+            resultText.textContent = "Quiz Completed!";
+            scoreText.textContent = "Your score is " + correctCount + " out of 10.";
+            resultContainer.classList.remove('hidden');
+        }
+
+        function restartQuiz() {
+            score = 0;
+            answers = [];
+            document.querySelectorAll('.question').forEach(question => {
+                question.classList.add('hidden');
+            });
+            document.getElementById('question1').classList.remove('hidden');
+            document.getElementById('result-container').classList.add('hidden');
+        }
+
+        window.addEventListener('beforeunload', function (e) {
+            e.preventDefault();
+            e.returnValue = '';
+        });
+
+        window.onload = function () {
+            window.onbeforeunload = function () {
+                return "Are you sure you want to leave this page?";
+            };
+        }
+
+        window.addEventListener('unload', function () {
+            localStorage.setItem('score', score);
+        });
+    </script>
+</body>
+</html>
